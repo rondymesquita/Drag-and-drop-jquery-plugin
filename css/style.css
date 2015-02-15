@@ -1,0 +1,110 @@
+/*Only for this example*/
+.container-fluid {
+	background: #fff;
+	max-width: 980px;
+	margin: auto;
+	padding: 10px;
+}
+*[class*="span"] {
+	border: 1px solid #ddd;
+}
+.span6 {
+	min-height: 400px;
+	padding: 20px;
+}
+.column {
+	border: 1px solid #ddd;
+	height: 100px;
+	/*line-height: 100px;*/
+	/*text-align: center;*/
+	color:#eee;
+	font-size: 15px;
+	position: relative;
+	margin-left:0 !important;
+}
+#column-one{
+	background: #5cace2;	
+}
+#column-two{
+	background: #e74c3c;
+}
+#column-three{
+	background: #f3cf3f;
+}
+#column-four{
+	background: #936dd6;
+}
+#column-five{
+	background: #a5e128;
+}
+.column.dragging {
+	background: #aaa;
+}
+#drop-one,
+#drop-two,
+#drop-three,
+#drop-four,
+#drop-five{
+	height:100px;
+	line-height:100px;
+}
+
+/*
+ * 
+ * Styles
+ * 
+ * */
+
+/* the drop area */
+*[draggable="true"]{
+	cursor: move;
+}
+.drop-area{
+	/*border: 3px dashed #ddd;*/
+	position: relative;
+	transition: all 0.3s ease;
+	padding:0 !important;
+}
+
+/*Drop area placeholder*/
+.drop-area:before{
+	content: attr(data-placeholder);
+	position:absolute;
+	z-index: 0;
+	color:#ddd;
+	display:block;
+	line-height: inherit;
+	height:inherit;
+	width:100%;
+	text-align: center;
+	font-size: 14px;
+}
+
+/*Drop area highlight */
+.drop-area.drop-area-active{	
+	background: #eee;
+	color:red;
+}
+/*Drop area hover*/
+.drop-area.drop-area-hover{
+	border-color: #5cace2;
+	background: #aaa;
+	color:blue;
+}
+table .drop-area{
+}
+
+/*If the drop area is aa table*/
+/*Current dragging row of a table: dont change this */
+.row-dragging{
+	position: absolute;
+	-webkit-box-shadow: 0px 0px 74px -28px #000;
+	box-shadow: 0px 0px 74px -28px #000;
+	display: inline-table !important;
+	border:1px solid #ddd;
+	background: #fff;
+}
+
+
+
+
